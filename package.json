@@ -1,0 +1,15 @@
+{
+  "name": "mnemonic-guesser",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "Greg Skriloff",
+  "license": "ISC",
+  "dependencies": {
+    "discord-webhook-node": "^1.1.8",
+    "dotenv": "^16.0.0",
+    "ethers": "^5.6.2"
+  }
+}
