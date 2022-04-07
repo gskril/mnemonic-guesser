@@ -25,7 +25,7 @@ const discordHook = new Webhook(process.env.DISCORD_WEBHOOK_URL);
     if (!ethers.utils.isValidMnemonic(mnemonic)) return;
 
     // get the account at the default path of the mnemonic
-    const hdNode = ethers.utils.HDNode.fromMnemonic(mnemonic)
+    const hdNode = ethers.utils.HDNode.fromMnemonic(mnemonic, '')
       .derivePath(ethers.utils.defaultPath);
 
     const { privateKey } = hdNode;
@@ -68,5 +68,5 @@ const discordHook = new Webhook(process.env.DISCORD_WEBHOOK_URL);
           .addField('**Address**', address, true),
       );
     }
-  }, 10); // check 100 mnemonics per second
+  }, 20); // check 50 mnemonics per second
 })();
